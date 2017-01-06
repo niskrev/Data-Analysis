@@ -13,7 +13,7 @@ for word in wordunique:
 def anagram_fast(word):
     return words_bysig[signature(word)]
 
-anagrams = {word:anagram_fast(word) for word in wordunique if len(anagram_fast(word))>1}
+anagrams = {word:anagram_fast(word) for word in wordunique if len(anagram_fast(word)) > 1}
 
 dic_by_size = defaultdict(list)
 
