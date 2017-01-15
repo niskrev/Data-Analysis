@@ -67,4 +67,7 @@ def plot_smoothed(data, win=10):
 
     plt.plot(data['date'], smoothed)
 
-
+def selectyear(data, year):
+    start = np.datetime64('{}'.format(year))
+    end = start + np.timedelta64(1,'Y')
+    return data[(data['date']>= start) & (data['date'] < end)]['value']
